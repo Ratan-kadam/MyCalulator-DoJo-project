@@ -69,7 +69,7 @@ define([
             display.value=0;
         }
     });
-
+   //+_ disabled
     CalciNumbers[2].disabled = true;
 
 

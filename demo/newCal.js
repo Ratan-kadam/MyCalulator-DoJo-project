@@ -63,7 +63,11 @@ define([
 
     // backspace button override. 
     CalciNumbers[1].addEventListener("click", function() {
+        
         display.value = display.value.substring(0, display.value.length - 2);
+        if(display.value.length < 1 ){
+            display.value=0;
+        }
     });
 
     CalciNumbers[2].disabled = true;

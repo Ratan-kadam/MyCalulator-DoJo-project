@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Calculator</title>
+    <link rel="stylesheet" href="css/calNew.css">
+</head>
+
+<body>
+
+
+    <!--outbox -->
+
+    <div class="outerBox">
+        <div class="calculator">
+            <input id="display" class="screen" value="0" readonly/>
+            <div class="part1">
+                <div class="buttons">
+                    <button id="clear" value="">C</button>
+                    <button id="backspace" value="-">⬅</button>
+                    <button id="neg" value="-+">±</button>
+                    <button id="divide" value="/">/</button>
+                    <button class="digit" id="cal7" value="7">7</button>
+                    <button class="digit" id="cal8" value="8">8</button>
+                    <button class="digit" id="cal9" value="9">9</button>
+                    <button id="multiply" id="multiply" value="*">*</button>
+                    <button class="digit" id="cal4" value="4">4</button>
+                    <button class="digit" id="cal5" value="5">5</button>
+                    <button class="digit" id="cal6" value="6">6</button>
+                    <button id="minus" class="operation" value="-">-</button>
+                    <button class="digit" id="cal1" value="1">1</button>
+                    <button class="digit" id="cal2" value="2">2</button>
+                    <button class="digit" id="cal3" value="3">3</button>
+                    <button id="plus" value="+">+</button>
+                    <button class="digit" id="cal0" value="0">0</button>
+                    <button class="digit" id="dot" value=".">.</button>
+                    <button id="equal" id="equal" value="=">=</button>
+                </div>
+            </div>
+            <!-- end of part 1 -->
+
+            <div class="part2"> <span class="noteMe"> Enter your Note </span>
+                <!--<input id="noteMe" /> -->
+                <textarea rows="4" cols="50"> </textarea>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- configure Dojo -->
+    <script>
+        var dojoConfig = {
+            async: true,
+            packages: [{
+                name: "demo",
+                location: location.pathname.replace(/\/[^/]*$/, '') + '/demo'
+            }]
+        };
+    </script>
+    <!-- load Dojo -->
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+    <script>
+        require([
+            'demo/newCal',
+            'dojo/domReady!'
+        ], function(calui) {
+
+        });
+    </script>
+</body>
+
+</html>
